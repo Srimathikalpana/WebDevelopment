@@ -1,0 +1,126 @@
+<body><h1>My Task Manager</h1>
+<input id="input-task" placeholder="Enter your task">
+<input id="input-time" placeholder="Enter time (e.g., 10:30 AM)">
+<button onclick="add()">Add</button>
+<ul id="list-container">
+</ul>
+</body>
+<style>
+    body{
+        background: rgb(175, 195, 219);
+    }
+    h1{
+        text-align: center;
+        color: #02458b;
+    }
+    #input-task, #input-time {
+        padding: 10px;
+        border: 2px solid #02458b;
+        border-radius: 4px;
+        width: calc(50% - 80px); /* Adjust width */
+        box-sizing: border-box;
+        margin-right: 10px;
+    }
+
+    /* Style for the button */
+    button {
+        background-color:#02458b;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 30px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    /* Style for the button on hover */
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Style for the task list container */
+    #list-container {
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    /* Style for each list item */
+    #list-container li {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Style for the task name */
+    .task-name {
+        flex: 1;
+        font-size: 16px;
+    }
+
+    /* Style for the task time */
+    .task-time {
+        font-size: 14px;
+        color: #6c757d;
+        margin-right: 15px;
+    }
+
+    /* Style for completed tasks (when checkbox is checked) */
+    .completed .task-name {
+        text-decoration: line-through;
+        color: #28a745; /* Green color for completed tasks */
+    }
+
+    /* Style for the delete button in each list item */
+    #list-container button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    #list-container button:hover {
+        background-color: #c82333;
+    }
+</style>
+
+<script>
+    var ul = document.getElementById("list-container");
+    var inputTask = document.getElementById("input-task");
+    var inputTime = document.getElementById("input-time");
+
+    function add() {
+        if (inputTask.value.trim() !== "" && inputTime.value.trim() !== "") {
+            var listItem = document.createElement("li");
+
+            listItem.innerHTML = 
+                "<input type='checkbox' class='task-checkbox' onclick='toggleComplete(event)'>" +
+                "<span class='task-name'>" + inputTask.value + "</span>" +
+                "<span class='task-time'>[" + inputTime.value + "]</span>" +
+                "<button onclick='deleteItem(event)'>Delete</button>";
+
+            ul.append(listItem);
+            inputTask.value = "";  // Clear the input field after adding the task
+            inputTime.value = "";  // Clear the time field
+        } else {
+            alert("Please enter both task and time.");
+        }
+    }
+
+    function deleteItem(event) {
+        event.target.parentElement.remove();
+    }
+
+    function toggleComplete(event) {
+        var listItem = event.target.parentElement;
+        listItem.classList.toggle("completed");
+    }
+</script>

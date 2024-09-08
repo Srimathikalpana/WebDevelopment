@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+</head>
+<body>
+    <nav  class="navbar sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-3 text-light" >
+                <h1 class="w-100 d-sm-block text-wrap">Shinchan Nohara</h1>
+                </a>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Pictures</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <img style="height: 400px; margin:20px" src="media/Shinchan.jpg"/> 
+            <div><h1>Hello Friends!</h1>
+                "Hey, I'm Shinnosuke Nohara, but you can call me Shinchan! I'm five years old, and I live in Kasukabe with my mom, dad, and little sister, Himawari. I love eating choco biscuits and watching Action Kamen! Oh, and I’m pretty good at doing the butt dance—wanna see? Hehe! I might get into a little trouble sometimes, but I always have fun! So, wanna play with me?"</div>
+        </section>
+        <section id="about">
+            <table cellpadding="8px"  style="color: black;">
+                <tr>
+                    <th>Name: </th>
+                <td>Shinchan Nohara</td>
+            </tr>
+            <tr>
+                <th>Father's Name: </th>
+            <td>Hiroshi Nohara</td>
+        </tr>
+        <tr>
+        <th>Mother's Name: </th>
+        <td>Misae Nohara</td>
+        </tr>
+        <tr>
+        <th>Age: </th>
+        <td>5 years old</td>
+        </tr>
+        <tr>
+            <th>Sister's Name: </th>
+            <td>Himawari Nohara</td>
+            </tr>
+            <tr>
+            <th>Pet: </th>
+            <td>Dog - Shiro</td>
+            </tr>
+            <tr><th>Hometown: </th>
+                <td>Kasukabe, a city in Saitama Prefecture, Japan</td>
+            </tr>
+            <tr>
+                <th>Friends : </th>
+                <td>Bo-chan, RuKazama, Sakurada, Masao Sato</td>
+                </tr>
+            </table>
+        </section>
+        <section id="services">
+            <div class="row justify-content-center">
+                <div id="shinchan" class="carousel slide carousel-dark">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#shinchan" data-bs-slide-to="0" class="active"></button>  
+                        <button type="button" data-bs-target="#shinchan" data-bs-slide-to="1" ></button>
+                        <button type="button" data-bs-target="#shinchan" data-bs-slide-to="2" ></button>
+                        <button type="button" data-bs-target="#shinchan" data-bs-slide-to="3" ></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="media/friends.jpg" height="520px" class="d-block w-100"/>
+                        </div>
+                        <div class="carousel-item">
+                                    <img src="media/shinchan family.jpg" height="520px" class="d-block w-100"/>
+                                    <div class="carousel-caption d-md-block">
+                                            <h3 class="text-dark">My Family</h3>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="media/shinchan friends.jpg" height="520px" class="d-block w-100"/>
+                                        <div class="carousel-caption d-md-block">
+                                            <h3 class="text-dark">My Friends</h3>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="media/Shinchan.jpg" height="520px" class="d-block w-100"/>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#shinchan" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button> 
+                                <button class="carousel-control-next" type="button" data-bs-target="#shinchan" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
