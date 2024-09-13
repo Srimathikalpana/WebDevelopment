@@ -17,12 +17,10 @@
         padding: 10px;
         border: 2px solid #02458b;
         border-radius: 4px;
-        width: calc(50% - 80px); /* Adjust width */
+        width: calc(50% - 80px); 
         box-sizing: border-box;
         margin-right: 10px;
     }
-
-    /* Style for the button */
     button {
         background-color:#02458b;
         color: white;
@@ -33,19 +31,13 @@
         font-size: 16px;
         transition: background-color 0.3s;
     }
-
-    /* Style for the button on hover */
     button:hover {
         background-color: #0056b3;
     }
-
-    /* Style for the task list container */
     #list-container {
         padding: 0;
         margin-top: 15px;
     }
-
-    /* Style for each list item */
     #list-container li {
         background-color: #f8f9fa;
         border: 1px solid #dee2e6;
@@ -56,27 +48,19 @@
         justify-content: space-between;
         align-items: center;
     }
-
-    /* Style for the task name */
     .task-name {
         flex: 1;
         font-size: 16px;
     }
-
-    /* Style for the task time */
     .task-time {
         font-size: 14px;
         color: #6c757d;
         margin-right: 15px;
     }
-
-    /* Style for completed tasks (when checkbox is checked) */
     .completed .task-name {
         text-decoration: line-through;
-        color: #28a745; /* Green color for completed tasks */
+        color: #28a745; 
     }
-
-    /* Style for the delete button in each list item */
     #list-container button {
         background-color: #dc3545;
         color: white;
@@ -108,8 +92,8 @@
                 "<button onclick='deleteItem(event)'>Delete</button>";
 
             ul.append(listItem);
-            inputTask.value = "";  // Clear the input field after adding the task
-            inputTime.value = "";  // Clear the time field
+            inputTask.value = "";  
+            inputTime.value = "";  
         } else {
             alert("Please enter both task and time.");
         }
