@@ -1,4 +1,3 @@
-// Selecting elements
 const hoursElement = document.getElementById('hours');
 const minutesElement = document.getElementById('minutes');
 const secondsElement = document.getElementById('seconds');
@@ -9,7 +8,6 @@ const resetButton = document.getElementById('reset');
 const lapButton = document.getElementById('lap');
 const lapsContainer = document.getElementById('laps');
 
-// Variables to store time values
 let hours = 0,
   minutes = 0,
   seconds = 0,
@@ -17,7 +15,6 @@ let hours = 0,
   interval = null,
   isRunning = false;
 
-// Function to update the stopwatch display
 function updateDisplay() {
   milliseconds += 10;
 
@@ -40,7 +37,6 @@ function updateDisplay() {
   millisecondsElement.textContent = formatMilliseconds(milliseconds);
 }
 
-// Helper functions to format time
 function formatTime(time) {
   return time < 10 ? `0${time}` : `${time}`;
 }
@@ -49,7 +45,6 @@ function formatMilliseconds(time) {
   return time < 100 ? `0${Math.floor(time / 10)}` : `${Math.floor(time / 10)}`;
 }
 
-// Start button event listener
 startButton.addEventListener('click', () => {
   if (!isRunning) {
     interval = setInterval(updateDisplay, 10);
@@ -57,7 +52,6 @@ startButton.addEventListener('click', () => {
   }
 });
 
-// Pause button event listener
 pauseButton.addEventListener('click', () => {
   if (isRunning) {
     clearInterval(interval);
@@ -65,7 +59,6 @@ pauseButton.addEventListener('click', () => {
   }
 });
 
-// Reset button event listener
 resetButton.addEventListener('click', () => {
   clearInterval(interval);
   isRunning = false;
@@ -77,7 +70,6 @@ resetButton.addEventListener('click', () => {
   lapsContainer.innerHTML = '';
 });
 
-// Lap button event listener
 lapButton.addEventListener('click', () => {
   if (isRunning) {
     const lapTime = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(
