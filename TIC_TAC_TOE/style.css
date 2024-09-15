@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(209, 183, 81);
+}
+
+.container {
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#modeSelection {
+    margin-bottom: 20px;
+}
+
+#modeSelection button {
+    border-radius: 5px;
+    border-width: 5px;
+    background-color: rgb(37, 105, 208);
+    padding: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#modeSelection button:hover {
+    background-color: rgb(30, 90, 180);
+}
+
+#modeSelection button.active{
+    background-color: rgb(25, 160, 34);
+    transform: scale(0.98);
+}
+
+
+#turnDisplay {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    background-color: #fdfdfd;
+    border: 2px solid #333;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.cell.x {
+    color: red;
+}
+
+.cell.o {
+    color: blue;
+}
+
+#restartButton {
+
+    background-color: red;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#resultMessage {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
